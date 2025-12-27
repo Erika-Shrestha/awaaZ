@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    cursor:pointer;
+}
+
+.wrapper {
+    min-height: 100vh;
+    background: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.head-section {
+    height: 35rem;
+    background: linear-gradient(to bottom right, rgba(182, 94, 186, 0.2), rgba(218, 235, 253, 0.5));
+}
+
+.intro-div{
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.hero-content {
+    display:flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    height: 15rem;
+    padding: 5rem;
+}
+
+.hero-title{
+    font-size:2.8rem;
+}
+
+.text-highlight{
+    color: rgba(0, 71, 211, 0.85);
+}
+
+.hero-description{
+    line-height: 1.5;
+}
+
+.btn-primary {
+    width: 10rem;
+    height: 2.7rem;
+    background: #2769BE;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.intro{
+    width: 35rem;
+    margin-right: 1rem;
+}
+
+.login-modal{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.modal-content.register{
+    height: 25rem;
+}
+
+.title{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.avatar-box{
+    height: 4.6rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.avatar img{
+    width: 4rem;
+    cursor: pointer;
+}
+
+.requirement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.requirement-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.indicator {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #d1d5db;
+}
+
+.requirement-text {
+    font-size: 0.5rem;
+    color: #374151;
+}
+
+.modal-content{
+    width: 25rem;
+    height:21rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 3rem;
+    position: relative;
+}
+
+.close-button {
+    all: unset;
+    font-size:2rem;
+    position: absolute;
+    top:3%;
+    left:90%;
+    cursor: pointer;
+}
+
+.login-img, .register-img{
+    margin-top: -1rem;
+    width:6rem;
+}
+
+.email-phone-input, .password-input{
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+
+.login-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+    color: #4f46e5;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group {
+    position: relative;
+    width: 23rem;
+}
+
+.input-group label{
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 515;
+    color: #312E8C;
+}
+
+.input-group.name {
+    margin-top: 1rem;
+}
+
+.input-field.short{
+    width: 9.8rem;
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.6rem;
+    padding-left: 1.5rem;
+    border: 0.1rem solid #1a1a1a;
+    border-radius: 1rem;
+    color: #374151;
+    font-size: 0.7rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-field::placeholder {
+    color: #B1A8A8;
+}
+
+.input-field:focus {
+    border-color: #6366f1;
+}
+
+.login-button{
+    width: 7rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin-left: 18rem;
+    background-color: rgba(49, 46, 140, 0.91);
+    color: white;
+    border: none;
+    border-radius: 4rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+
+}
+
+.btn.btn-primary{
+    width: 7rem;
+    height: 2rem;
+    margin-top: 2rem;
+    margin-left: 18rem;
+    background-color: rgba(49, 46, 140, 0.91);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-button.step2{
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    top: 80%;
+    left: 48%;
+}
+
+.register-button.step2 button{
+    width: 6rem;
+    height: 2rem;
+    background-color: rgba(49, 46, 140, 0.91);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 4rem;
+    color: white;
+}
+
+.login-button:hover {
+    background: #4f46e5;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.progress-indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.progress-bar {
+    height: 0.1rem;
+    width: 5rem;
+    border-radius: 0.25rem;
+    background-color: #d1d5db;
+    transition: background-color 0.3s;
+}
+
+.progress-bar.active {
+    background-color: #312e81;
+}
+
+.register-section {
+    margin-top: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.register-section.step2{
+    margin-top: 0.2rem;
+}
+
+.register-text {
+    color: #4b5563;
+    font-size: 0.8rem;
+}
+
+.register-link {
+    color: #6366f1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 0;
+    font-size: 0.8rem;
+}
+
+.register-link:hover {
+    color: #4f46e5;
+}
+
+.register-line {
+    flex: 1;
+    height: 1.5px;
+    background: linear-gradient(to bottom right, rgba(182, 94, 186, 0.2), rgba(218, 235, 253, 0.5));
+}
+
+.register-content {
+    white-space: nowrap;
+}
+
+.socials-banner{
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.6rem;
+}
+
+.socials-icon{
+    width: 1.3rem;
+}
+
+.socials h2{
+    font-weight: 500;
+}
+
+.steps-section {
+    margin-top: 1rem;
+    min-height: 30rem;
+}
+
+.steps-header {
+    position: sticky;    
+    top: 1rem;
+    max-width: 80rem;
+    text-align: center;
+}
+
+.steps-badge {
+    display: inline-block;
+    background: rgba(185, 46, 168, 0.3);
+    color: black;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6rem;
+    margin-bottom: 1.8rem;
+}
+
+.steps-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #111827;
+}
+
+.text-pink {
+    color: #B92EA8;
+}
+
+.sticky-section{
+    display: flex;
+    height: 400vh;
+}
+
+.sticky-wrapper {
+    position: relative;
+    height: 400vh;
+}
+
+.sticky-card {
+    position: sticky;
+    top: 10rem;
+    height: 75vh;
+    padding: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    background: rgba(218, 235, 253, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 0.2rem rgba(150, 150, 150, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.step-1 {
+    z-index: 1;
+}
+
+.step-2 {
+    z-index: 2;
+}
+
+.step-3 {
+    z-index: 3;
+}
+
+.step-4 {
+    z-index: 4;
+}
+
+.step-number {
+    position: absolute;
+    top: 3rem;
+    left: 10rem;
+    width: 3rem;
+    height: 3rem;
+    background: #2769EC;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.visual-box {
+    position: absolute;
+    left: 23%;
+    top: 18%;
+    width: 15rem;
+    height: 15rem;
+    background: linear-gradient(to bottom, rgba(218, 235, 253, 1), rgba(218, 235, 253, 0.3));
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-text{
+    width: 30rem;
+    height: 10rem;
+    margin-left: 35rem;
+    margin-top: 6rem;
+}
+
+.feature-title{
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    font-weight: 480;
+}
+
+.feature-description{
+    color: #968B8B;
+}
+
+.steps-icon{
+    width: 7.5rem;
+}
+
+.steps-icon.step-2, .steps-icon.step-3, .steps-icon.step-4{
+    width: 10rem;
+}
+
+.step-number.step-2, .step-number.step-4{
+    left: 65rem;
+}
+
+.text-orange{
+    color: #E77619;
+}
+
+.visual-box.step-2, .visual-box.step-4{
+    top: 18%;
+    left: 58%;
+}
+
+.feature-text.step-2, .feature-text.step-4{
+    margin-left: 8rem;
+}
+
+.views{
+    height: 100vh;
+}

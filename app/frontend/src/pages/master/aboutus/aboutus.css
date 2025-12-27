@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+button{
+    cursor:pointer;
+}
+
+.wrapper {
+    min-height: 100vh;
+    background: white;
+}
+
+.aboutus-head-section{
+    height: 35rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    gap: 3rem;
+    padding-left: 5rem;
+    padding-right: 2rem;
+}
+
+.about-intro-div{
+    width: 25rem;
+    height: 19rem;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    padding-top: 1.5rem;
+    background: linear-gradient(to bottom right, rgba(182, 94, 186, 0.2), rgba(218, 235, 253, 0.5));
+}
+
+.aboutus-img{
+    width: 40rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.about-icon{
+    width: 97%;
+}
+
+.about-label {
+    color: #5e35b1;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.about-heading {
+    font-size: 2rem;
+    font-weight: 510;
+    letter-spacing: 0.2px;
+    color: #1a1a1a;
+    margin-bottom: 2.5rem;
+    line-height: 1.2;
+}
+
+.stats-container {
+    display: flex;
+    gap: 1.5rem;
+    height: 4.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.stat-card {
+    width: 8rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid #2769BE;
+}
+
+.stat-number {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.1rem;
+}
+
+.stat-description {
+    font-size: 0.55rem;
+    color: #757575;
+    margin: 0;
+}
+
+.explore-button {
+    background-color: #2769BE;
+    color: white;
+    padding: 0.5rem 2.5rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: block;
+    margin-left: 16.5rem;
+}
+
+.explore-button:hover {
+    background-color: #365899;
+}
+
+.about-feature-section{
+    margin-top: 3rem;
+    height: 35rem;
+}
+
+.about-feedback-section{
+    height: 50rem;
+    background-color: #312E8C;
+}
+
+
+.choose-label {
+    color: rgba(49, 46, 140, 0.86);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.choose-heading {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 3rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.choose-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 75rem;
+    height: 20rem;
+    margin: 0 auto;
+}
+
+.choose-card {
+    width: 20rem;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choose-icon{
+    width: 9rem;
+    margin-bottom: 1rem;
+}
+
+.choose-icon.lottie1{
+    margin-top: -2rem;
+    margin-bottom: 1.9rem;
+}
+
+.choose-icon.lottie2{
+    width: 10rem;
+}
+
+.choose-icon.lottie3{
+    margin-top: -1.5rem;
+    width: 11rem;
+    margin-bottom: -0.5rem;
+}
+
+.choose-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.choose-description {
+    font-size: 0.875rem;
+    color: #312E8C;
+    line-height: 1.6;
+    font-weight: 500;
+    text-align: center;
+}
+
+.about-feedback-section {
+    padding: 4rem 14rem;
+    background-color: #f9fafb;
+    text-align: center;
+}
+
+.feedback-title{
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgba(49, 46, 140, 0.86);
+    margin-bottom: 1rem;
+}
+
+.subheading {
+    font-size: 1rem;
+    color: #968B8B;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.feedback-grid {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.left-column,
+.center-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 15rem;
+}
+
+.feedback-card{
+    width: 12rem;
+    height: 10rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-card.short{
+    width: 14rem;
+    height: 4.5rem;
+}
+
+.feedback-card.sec-short{
+    height: 6.5rem;
+}
+
+.feedback-card.long{
+    height: 13.5rem;
+}
+
+.stars{
+    color: #B65EBA;
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+}
+
+.feedback-text {
+    font-size: 0.8rem;
+    color: #6b7280;
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.aboutus-avatar{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #d1d5db;
+    overflow: hidden;
+}
+
+
+.user-name {
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.user-role {
+    font-size: 0.5rem;
+    color: #9ca3af;
+    margin: 0;
+}
+
+.center-image {
+    width: 100%;
+    height: 18rem;
+    background-color: #9ca3af;
+    border-radius: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+
