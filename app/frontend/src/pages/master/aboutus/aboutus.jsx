@@ -1,7 +1,7 @@
 import './aboutus.css';
 import Lottie from "lottie-react";
-import Navbar from '../../../components/navbar/navbar';
 import Footer from '../../../components/footer/footer';
+import Email from '../../../components/email/email';
 import aboutus_banner from "../../../assets/aboutus_banner.png";
 import lottie_1 from "../../../assets/lottie1.json";
 import lottie_2 from "../../../assets/lottie2.json";
@@ -15,7 +15,6 @@ import feedback1 from "../../../assets/feedback1.jpg";
 const AboutUs = () => {
     return(
         <div>
-            <Navbar/>
             <section className="aboutus-head-section">
                 <div className="about-intro-div">
                     <p className="about-label">About Us</p>
@@ -27,11 +26,11 @@ const AboutUs = () => {
                         </div>
                         <div className="stat-card">
                             <p className="stat-number">80%</p>
-                            <p className="stat-description">Accuracy to identify<br/>your biases</p>
+                            <p className="stat-description">Accuracy to identify<br/>your bubbles</p>
                         </div>
                         <div className="stat-card">
                             <p className="stat-number">50+</p>
-                            <p className="stat-description">Number of Articles<br/>fished</p>
+                            <p className="stat-description">Number of Articles<br/>listed</p>
                         </div>
                     </div>
                     <button className="explore-button">Explore</button>
@@ -164,6 +163,7 @@ const AboutUs = () => {
                     </div>
                 </div>
             </section>
+            <Email/>
             <Footer/>
         </div>
     )
