@@ -1,0 +1,96 @@
+.blog-section {
+    padding: 2rem 2rem;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.blogs-subscribe-container {
+    max-width: 50rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.blogs-badge {
+    background: yellow;
+    color: #1a1a1a;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.375rem;
+    display: inline-block;
+}
+
+.blogs-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.blogs-subtitle {
+    font-size: 1rem;
+    color: #6b7280;
+    margin: 0;
+    max-width: 37.5rem;
+    line-height: 1.6;
+}
+
+.blogs-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: #f3f4f6;
+    border-radius: 3.125rem;
+    padding: 0.375rem;
+    height: 2rem;
+    width: 100%;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.blogs-email-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9375rem;
+    color: #1a1a1a;
+    outline: none;
+}
+
+.blogs-email-input::placeholder {
+    color: #9ca3af;
+}
+
+.blogs-subscribe-button {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 0.6rem 2rem;
+    border-radius: 3.125rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.blogs-subscribe-button:hover {
+    background: #4f46e5;
+}
+
+.all-blogs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    align-items: flex-start
+}
+

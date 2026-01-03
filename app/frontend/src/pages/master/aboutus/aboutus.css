@@ -190,8 +190,9 @@ button{
 
 .about-feedback-section {
     padding: 4rem 14rem;
-    background-color: #f9fafb;
+    background-color: white;
     text-align: center;
+    height: 40rem;
 }
 
 .feedback-title{
