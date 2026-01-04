@@ -1,0 +1,64 @@
+.customer-sidebar {
+    width: 5rem;
+    height: 100vh;
+    border-right: 1px solid #e5e7eb;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    position: fixed;
+    top: 3.5rem; 
+    left: 0;
+    height: calc(100vh - 3.5rem);
+    z-index: 99;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0.75rem;
+    margin: 0 0.5rem;
+    color: #32316D;
+    text-decoration: none; 
+}
+
+.menu-item:hover .menu-icon {
+    background: #e5e7eb;
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+}
+
+.menu-item.active {
+    color: #2769EC;
+}
+
+.menu-item.active .menu-icon {
+    background: rgba(39, 105, 236, 0.37);
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+}
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;    
+    border-radius: 0.6rem;
+    transition: background 0.3s ease;
+}
+
+.menu-icon img{
+    width: 1.3rem;
+}
+
+.menu-text{
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-align: center;
+}

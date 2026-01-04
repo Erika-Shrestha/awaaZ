@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.profile-main-content{
+    margin-left: 6rem; 
+    margin-top: 3.5rem; 
+    padding: 2rem;
+    min-height: calc(100vh - 3.5rem);
+}
+
+
+
+/* Main Content */
+.customer-main-content {
+  display: flex;
+  gap: 2.5rem;
+  max-width: 90rem;
+  flex-wrap: wrap;
+}
+
+/* Left Section */
+.customer-profile-left-section {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.customer-profile-section-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #1f2937;
+  letter-spacing: 0.05em;
+  margin: 0 0 1.25rem 0;
+}
+
+.profile-image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.875rem;
+}
+
+.customer-profile-image-container {
+  width: 12.5rem;
+  height: 12.5rem;
+  overflow: hidden;
+}
+
+.customer-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.change-image-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 70%;
+    padding: 0.75rem;
+    background: linear-gradient(to right, rgba(50, 49, 109, 1), rgba(39, 105, 236, 0.6));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border: none;
+    color: #4f46e5;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.change-image-button img{
+    width: 1.2rem;
+}
+
+.my-details-section {
+  width: 20rem;
+  padding: 1rem;
+  margin-top: -3rem;
+  margin-left: 1.3rem;
+}
+
+.profile-form-group {
+  margin-bottom: 1.25rem;
+}
+
+.profile-form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #312E8C;
+  margin-bottom: 0.5rem;
+}
+
+.profile-form-input.detail{
+  width: 70%;
+  padding: 0.5rem;
+  border: 0.063rem solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.7rem;
+  color: #1f2937;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.profile-form-input{
+  width: 100%;
+  padding: 0.5rem;
+  border: 0.063rem solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.7rem;
+  color: #1f2937;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.profile-form-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.profile-form-input::placeholder {
+  color: #9ca3af;
+}
+
+.profile-form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.875rem;
+}
+
+.profile-save-button {
+  width: 8rem;
+  height: 2.5rem;
+ background: linear-gradient(to right, rgba(50, 49, 109, 1), rgba(39, 105, 236, 0.6));
+  color: white;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.profile-save-button:hover {
+  background-color: #4338ca;
+}
+
+.profile-cancel-button {
+    width: 6rem;
+  height: 2.5rem;
+  background-color: #D9D9D9;
+  color: #000000;
+  border: 0.063rem solid #d1d5db;
+  border-radius: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.profile-cancel-button:hover {
+  background-color: #f9fafb;
+}
+
+.customer-profile-middle-section{
+    width: 18rem;
+    margin-top: 4.8rem;
+}
+
+.inboxes{
+    position: absolute;
+    top: 25%;
+    left:30%;
+    margin-bottom: 5rem;
+}
+
+/* Right Section */
+.customer-profile-right-section {
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Info Box */
+.info-box {
+  background-color: white;
+  padding: 1.25rem 1.875rem;
+}
+
+.info-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #1f2937;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.5rem 0;
+}
+
+.info-date,
+.info-role {
+  font-size: 0.7rem;
+  color: #6b7280;
+}
+
+/* Connected Socials */
+.connected-socials {
+    position: absolute;
+    left: 70%;
+  background-color: white;
+  padding: 1.875rem;
+}
+
+.socials-subtitle {
+  font-size: 0.813rem;
+  color: #9ca3af;
+  margin: 0 0 1.5rem 0;
+}
+
+.social-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 0.063rem solid #f3f4f6;
+}
+
+.social-item:last-child {
+  border-bottom: none;
+}
+
+.social-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.facebook-icon {
+  background-color: transparent;
+}
+
+.twitter-icon {
+  background-color: transparent;
+}
+
+.youtube-icon {
+  background-color: transparent;
+}
+
+.social-username {
+  font-size: 0.938rem;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 2.5rem;
+  height: 1.3rem;
+  cursor: pointer;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d1d5db;
+  border-radius: 1.625rem;
+  transition: background-color 0.3s;
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  left: 0.188rem;
+  bottom: 0.188rem;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background-color: #4f46e5;
+}
+
+.toggle-switch input:checked + .toggle-slider::before {
+  transform: translateX(1.175rem);
+}
+
+/* Change Password Section */
+.change-password-section {
+  background-color: white;
+  padding: 1.875rem;
+  border-radius: 0.75rem;
+  margin-top: 15.2rem;
+}
+
+/* Password Requirements */
+.password-requirements {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.requirement-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.requirement-dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  flex-shrink: 0;
+}
+
+.requirement-item.active .requirement-dot {
+  background-color: #312E8C;
+}
+
+.requirement-text {
+  font-size: 0.6rem;
+  color: #6b7280;
+}
+
+.requirement-item.active .requirement-text {
+  color: #312E8C;
+}
+

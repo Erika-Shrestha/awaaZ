@@ -1,17 +1,49 @@
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, useLocation} from "react-router-dom";
 import { useState } from "react";
 import HomeDisplay from './pages/master/home/home';
 import AboutUsDisplay from './pages/master/aboutus/aboutus';
 import BlogDisplay from './pages/master/blog/blog';
 import ContactUsDisplay from './pages/master/contactus/contactus';
+import DashboardDisplay from './pages/customer/dashboard/dashboard';
+import CandidateDisplay from './pages/customer/candidate/candidate';
+import SocialsDisplay from './pages/customer/socials/socials';
+import PollDisplay from './pages/customer/poll/poll';
+import SettingsDisplay from './pages/master/settings/settings';
+import ProfileDisplay from './pages/master/profile/profile';
 import Navbar from './components/navbar/navbar';
-import Footer from './components/footer/footer';
 import register from "./assets/register_step_1.png";
 import avatar_1 from "./assets/woman.png";
 import avatar_2 from "./assets/man.png";
 import avatar_3 from "./assets/old-man.png";
 import lock from "./assets/lock.png";
 import './App.css';
+
+function Layout({ openLogin, openRegister }) {
+    const location = useLocation(); 
+    const hideNavbarRoutes  = ["/candidate", "/dashboard", "/poll", "/settings", "/socials", "/profile"];
+    const hideNavbar = hideNavbarRoutes.includes(location.pathname);
+
+    return (
+        <>
+            {!hideNavbar && (
+                <Navbar openLogin={openLogin} openRegister={openRegister} />
+            )}
+
+            <Routes>
+                <Route path="/" element={<HomeDisplay />} />
+                <Route path="/aboutus" element={<AboutUsDisplay />} />
+                <Route path="/blog" element={<BlogDisplay />} />
+                <Route path="/contactus" element={<ContactUsDisplay />} />
+                <Route path="/dashboard" element={<DashboardDisplay />} />
+                <Route path="/candidate" element={<CandidateDisplay />} />
+                <Route path="/socials" element={<SocialsDisplay />} />
+                <Route path="/poll" element={<PollDisplay />} />
+                <Route path="/profile" element={<ProfileDisplay />} />
+                <Route path="/settings" element={<SettingsDisplay />} />
+            </Routes>
+        </>
+    );
+}
 
 function App() {
 
@@ -42,13 +74,7 @@ function App() {
 
     return (
     <Router>
-        <Navbar openLogin={openLogin} openRegister={openRegister} />
-        <Routes>
-        <Route  path="/" element={<HomeDisplay/>}></Route>
-        <Route  path="/aboutus" element={<AboutUsDisplay/>}></Route>
-        <Route  path="/blog" element={<BlogDisplay/>}></Route>
-        <Route  path="/contactus" element={<ContactUsDisplay/>}></Route>
-        </Routes>
+        <Layout openLogin={openLogin} openRegister={openRegister} />
         {showLoginModal && (
         <div className="login-modal">
             <div className="modal-content">

@@ -21,9 +21,9 @@ const Home = () => {
     const [expandedCard, setExpandedCard] = useState(null);
     const toggleCard1 = () => {
         if (expandedCard === 1) {
-        setExpandedCard(null); // Close if already open
+        setExpandedCard(null); 
         } else {
-        setExpandedCard(1); // Open card 1
+        setExpandedCard(1); 
         }
     };
 
@@ -141,7 +141,7 @@ const Home = () => {
                     <div className="views-cards-grid">
                         <div className={expandedCard === 1 ? "view-card expanded" : "view-card"}>
                             <div className="view-card-image">
-                               <img  src={blog1} alt="blog1"/>
+                                <img  src={blog1} alt="blog1"/>
                             </div>
                             <div className="view-card-content">
                                 <h3 className="view-card-title">How does AwaaZ handle linked socials?</h3>
