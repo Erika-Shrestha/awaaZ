@@ -273,7 +273,6 @@
   font-weight: 500;
 }
 
-/* Toggle Switch */
 .toggle-switch {
   position: relative;
   display: inline-block;
@@ -312,7 +311,7 @@
 }
 
 .toggle-switch input:checked + .toggle-slider {
-  background-color: #4f46e5;
+  background: linear-gradient(to right, rgba(50, 49, 109, 1), rgba(39, 105, 236, 0.6));
 }
 
 .toggle-switch input:checked + .toggle-slider::before {
