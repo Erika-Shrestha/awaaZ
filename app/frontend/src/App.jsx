@@ -8,8 +8,10 @@ import DashboardDisplay from './pages/customer/dashboard/dashboard';
 import CandidateDisplay from './pages/customer/candidate/candidate';
 import SocialsDisplay from './pages/customer/socials/socials';
 import PollDisplay from './pages/customer/poll/poll';
-import SettingsDisplay from './pages/master/settings/settings';
 import ProfileDisplay from './pages/master/profile/profile';
+import AdminDashboardDisplay from './pages/Admin/admindashboard/admindashboard';
+import UserManagementDisplay from './pages/Admin/usermanagement/usermanagement';
+import CandidateManagementDisplay from './pages/Admin/candidatemanagement/candidatemanagement';
 import Navbar from './components/navbar/navbar';
 import register from "./assets/register_step_1.png";
 import avatar_1 from "./assets/woman.png";
@@ -20,7 +22,7 @@ import './App.css';
 
 function Layout({ openLogin, openRegister }) {
     const location = useLocation(); 
-    const hideNavbarRoutes  = ["/candidate", "/dashboard", "/poll", "/settings", "/socials", "/profile"];
+    const hideNavbarRoutes  = ["/candidate", "/dashboard", "/poll", "/settings", "/socials", "/profile", "/admindashboard", "/usermanagement", "/candidatemanagement"];
     const hideNavbar = hideNavbarRoutes.includes(location.pathname);
 
     return (
@@ -39,7 +41,9 @@ function Layout({ openLogin, openRegister }) {
                 <Route path="/socials" element={<SocialsDisplay />} />
                 <Route path="/poll" element={<PollDisplay />} />
                 <Route path="/profile" element={<ProfileDisplay />} />
-                <Route path="/settings" element={<SettingsDisplay />} />
+                <Route path="/admindashboard" element={<AdminDashboardDisplay />} />
+                <Route path="/usermanagement" element={<UserManagementDisplay />} />
+                <Route path="/candidatemanagement" element={<CandidateManagementDisplay />} />
             </Routes>
         </>
     );

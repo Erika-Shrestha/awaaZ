@@ -8,12 +8,19 @@ import optionadd from "../../../assets/option-add.png";
 import candidate1 from "../../../assets/candidate-1.jpg";
 import candidate2 from "../../../assets/candidate-2.jpg";
 import candidate3 from "../../../assets/candidate-3.jpg";
+import copy from "../../../assets/copy.png";
+import instagram from "../../../assets/instagram.png";
+import facebook from "../../../assets/facebook.png";
+import twitter from "../../../assets/twitter.png";
+import expand from "../../../assets/expandarrow.png";
 
 const Poll = () => {
     const [selectedType, setSelectedType] = useState('link');
     const [responseType, setResponseType] = useState('radio');
     const [showOptionPopup, setShowOptionPopup] = useState(false);
+    const [showPostPopup, setShowPostPopup] = useState(false);
     const [position, setPosition] = useState({ x: 300, y: 150 });
+    const [openPollPlatform, setOpenPollPlatform] = useState([]);
     return(
         <div>
             <CustomerNavbar/>
@@ -127,6 +134,75 @@ const Poll = () => {
                                     )}
                                 </div>
                             </div>
+                        </div>
+                        <div className="post-container">
+                            <button className="post-btn"onClick={() => setShowPostPopup(true)}>Post</button>
+                            {showPostPopup && (
+                                <div className="share-popup-overlay">
+                                    <div className="share-popup">
+                                        <button className="share-close-button" onClick={() => setShowPostPopup(false)}>×</button>
+                                        <h2 className="share-title">Share With Friends</h2>
+                                        <div className="link-container">
+                                            <input type="text" className="link-input"value="https://docs.google.com/forms/d/1CVbzCKXdB3OuULa6bGcHgJRd42/edit#responses" readOnly />
+                                            <button className="copy-button">
+                                                <img src={copy} alt="Copy"/>
+                                            </button>
+                                        </div>
+                                        <div className="profile-section">
+                                            <img src={candidate1} alt="Candidate" className="option-avatar" />
+                                        </div>
+                                        <button className="share-button"onClick={() => setShowPostPopup(false)}>Share</button>
+                                    </div>
+                                </div>)}
+                        </div>
+                    </div>
+                </div>
+                <div className="poll-platforms-container">
+                    <div className="poll-platforms-box">
+                        <div className="poll-platform-item">
+                            <div className="poll-platform-header">
+                                <div className="poll-platform-left-section">
+                                <img src={instagram} alt="Instagram" className="platform-icon" />
+                                <span className="poll-platform-name">Instagram</span>
+                                </div>
+                                <img src={expand} alt="Instagram" onClick={() => setOpenPollPlatform(openPollPlatform === 'instagram' ? null : 'instagram')} className={`poll-platform-arrow ${openPollPlatform === 'instagram' ? 'open' : ''}`}/>
+                            </div>
+                            {openPollPlatform === 'instagram' && (
+                                <div className="poll-account-section">
+                                    <input type="radio" name="poll-account" className="poll-account-radio" />
+                                    <span className="poll-account-name">tivona.bhutia123</span>
+                                </div>
+                            )}
+                        </div>
+                        <div className="poll-platform-item">
+                            <div className="poll-platform-header">
+                                <div className="poll-platform-left-section">
+                                <img src={twitter} alt="Twitter" className="platform-icon" />
+                                <span className="poll-platform-name">Twitter</span>
+                                </div>
+                                <img src={expand} alt="Twitter" onClick={() => setOpenPollPlatform(openPollPlatform === 'twitter' ? null : 'twitter')} className={`poll-platform-arrow ${openPollPlatform === 'twitter' ? 'open' : ''}`} />
+                            </div>
+                            {openPollPlatform === 'twitter' && (
+                                <div className="poll-account-section">
+                                    <input type="radio" name="poll-account" className="poll-account-radio" />
+                                    <span className="poll-account-name">tivona.bhutia123</span>
+                                </div>
+                            )}
+                        </div>
+                        <div className="poll-platform-item">
+                            <div className="poll-platform-header">
+                                <div className="poll-platform-left-section">
+                                <img src={facebook} alt="Facebook" className="platform-icon" />
+                                <span className="poll-platform-name">Facebook</span>
+                                </div>
+                                <img src={expand} alt="Twitter" onClick={() => setOpenPollPlatform( openPollPlatform === 'facebook' ? null : 'facebook')} className={`poll-platform-arrow ${openPollPlatform === 'facebook' ? 'open' : ''}`} />
+                            </div>
+                            {openPollPlatform === 'facebook' && (
+                                <div className="poll-account-section">
+                                    <input type="radio" name="poll-account" className="poll-account-radio" />
+                                    <span className="poll-account-name">tivona.bhutia123</span>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.user-management-main-content{
+    margin-left: 6rem; 
+    margin-top: 3.5rem; 
+    padding: 2rem;
+    min-height: calc(100vh - 3.5rem);
+}
+
+.management-users-title{
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+}
+
+.management-users-count{
+    background: linear-gradient(to right, #B65EBA 0%, #615FD3 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.4rem;
+}

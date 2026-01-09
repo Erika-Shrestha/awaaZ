@@ -1,0 +1,211 @@
+.management-users-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
+.management-users-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 5.5rem;
+    height: 2.3rem;
+    left: 85.5%;
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    border-radius: 0.5rem;
+    background: linear-gradient( rgba(182, 94, 186, 0.3), rgba(218, 235, 253, 0.8));
+}
+
+.management-filters-button {
+    width: 1.6rem;
+    height: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    background: transparent;
+    border: 0.09rem solid black;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.management-filters-icon {
+    width: 0.9rem;
+}
+
+.add-user-button {
+    width: 1.6rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.add-user-button img{
+    width: 1.5rem;
+}
+
+.add-user-button:hover {
+    transform: scale(1.01);
+}
+
+.plus-icon {
+    font-size: 1.25rem;
+}
+
+.management-table{
+    width: 90%;
+    border-collapse: collapse;
+    background: white;
+    margin-left: 3rem;
+}
+
+.management-table thead {
+    background: #f9fafb;
+    border-top: 0.063rem solid #e5e7eb;
+    border-bottom: 0.063rem solid #e5e7eb;
+}
+
+.management-table th {
+    padding: 0.75rem 1.5rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #32316D;
+    background-color: rgba(39, 105, 236, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.checkbox-column {
+    width: 3rem;
+}
+
+.name-column {
+    width: 25%;
+}
+
+.access-column {
+    width: 20%;
+}
+
+.last-active-column {
+    width: 15%;
+}
+
+.date-added-column {
+    width: 15%;
+}
+
+.management-actions-column {
+    width: 3rem;
+}
+
+.management-header-checkbox, .row-checkbox {
+    width: 1.125rem;
+    height: 1.125rem;
+    cursor: pointer;
+}
+
+.management-row {
+    border-bottom: 0.03rem solid #e5e7eb;
+}
+
+.management-row:hover {
+    background: #f9fafb;
+}
+
+.management-table td {
+    padding: 1rem 1.5rem;
+    vertical-align: middle;
+}
+
+.management-user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.management-user-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.management-user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.management-user-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+.management-user-email {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.management-access-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.management-user-badge {
+    padding: 0.25rem 0.625rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.management-user-badge.extra{
+    background: #f0fdf4;
+    color: #15803d;
+    border: 0.063rem solid #bbf7d0;
+}
+
+.management-user-badge.data-export {
+    background: #eff6ff;
+    color: #1e40af;
+    border: 0.063rem solid #bfdbfe;
+}
+
+.management-user-badge.admin{
+    background: #f5f3ff;
+    color: #6b21a8;
+    border: 0.063rem solid #ddd6fe;
+}
+
+.role-row, .status-row, .social-row{
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.crud-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+
+.crud-button:hover {
+    color: #6b7280;
+    background: #f3f4f6;
+    border-radius: 0.25rem;
+}

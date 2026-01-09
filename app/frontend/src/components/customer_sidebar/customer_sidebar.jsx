@@ -6,7 +6,6 @@ import candidate from "../../assets/candidate.png";
 import socials from "../../assets/social.png";
 import poll from "../../assets/poll.png";
 import profile from "../../assets/profile.png";
-import setting from "../../assets/settings.png";
 
 const CustomerSidebar = () => {
     return(
@@ -40,12 +39,6 @@ const CustomerSidebar = () => {
                     <img src={profile} alt="Profile" />
                 </div>
                 <span className="menu-text">Profile</span>
-            </NavLink>
-            <NavLink to="/settings" className={({ isActive }) => isActive ? 'menu-item active' : 'menu-item'}>
-                <div className="menu-icon">
-                    <img src={setting} alt="Settings" />
-                </div>
-                <span className="menu-text">Settings</span>
             </NavLink>
         </div>
     )

@@ -6,4 +6,4 @@ app.include_router(auth.router)
 
 @app.get("/")
 def root():
-    return {"message": "AwaaZ backend is running!"}
+    return {"message": "AwaaZ backend"}

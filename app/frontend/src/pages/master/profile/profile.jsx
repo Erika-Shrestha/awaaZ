@@ -2,6 +2,7 @@ import './profile.css';
 import {useState} from 'react';
 import CustomerNavbar from '../../../components/customer_navbar/customer_navbar';
 import CustomerSidebar from '../../../components/customer_sidebar/customer_sidebar';
+import AdminSidebar from '../../../components/admin_sidebar/admin_sidebar';
 import facebook from "../../../assets/facebook.png";
 import twitter from "../../../assets/twitter.png";
 import youtube from "../../../assets/youtube.png";
@@ -9,7 +10,7 @@ import avatar_1 from "../../../assets/woman.png";
 import gallery from "../../../assets/gallery.png";
 
 const Profile = () => {
-    
+    const role = "ADMIN";
     const [facebookToggle, setFacebookToggle] = useState(false);
     const [twitterToggle, setTwitterToggle] = useState(true);
     const [youtubeToggle, setYoutubeToggle] = useState(true);
@@ -17,7 +18,7 @@ const Profile = () => {
     return(
         <div>
             <CustomerNavbar/>
-            <CustomerSidebar/>
+            {role === "ADMIN" ? <AdminSidebar /> : <CustomerSidebar />}
             <div className="profile-main-content">
                 <div className="customer-main-content">
                     <div className="customer-profile-left-section">
