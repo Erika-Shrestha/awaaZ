@@ -152,41 +152,33 @@
 }
 
 .visibility-score {
-    width: 10rem;
-    height: 10rem;
+    width: 13rem;
+    height: 13rem;
     border-radius: 50%;
-    background: linear-gradient( rgba(50, 49, 109, 1), rgba(97, 95, 211, 0.5));
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
     margin: 0 auto;
+    position: relative;
 }
 
-.visibility-score::before {
-    content: '';
+.score-text{
     position: absolute;
-    width: 8rem;
-    height: 8rem;
-    background: white;
-    border-radius: 50%;
+    top: 35%;
+    left: 21%;
+    text-align: center;
 }
 
-.score-text {
-    position: relative;
-    z-index: 1;
-    font-size: 0.875rem;
-    color: #6b7280;
-    margin-bottom: 0.25rem;
+.score-text h1{
+    font-size: 1.1rem;
+    font-weight: 400;
 }
 
-.score-value {
-    position: relative;
-    z-index: 1;
+.score-text p{
     font-size: 2rem;
-    font-weight: 700;
-    color: #1a1a1a;
+    font-weight: 500;
 }
 
 .candidate-profile-right {

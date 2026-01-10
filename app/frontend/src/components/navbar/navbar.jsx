@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import './navbar.css';
 import logo from '../../assets/logo.png';
+import featurearrow from '../../assets/downarrow.png';
 
 const Navbar = ({  openLogin, openRegister  }) =>{
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = ({  openLogin, openRegister  }) =>{
             <div className="nav-links">
                 <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Home</NavLink>
                 <div className="feature-dropdown-container">
-                    <button className="nav-link dropdown-button" onClick={handleDropdownClick}>Features<span className={isDropdownOpen ? "arrow-icon open" : "arrow-icon"}>▼</span></button>
+                    <button className="nav-link dropdown-button" onClick={handleDropdownClick}>Features<img src={featurearrow} alt="arrow" className={isDropdownOpen ? "arrow-icon open" : "arrow-icon"} /></button>
                     {isDropdownOpen && (
                         <div className="dropdown-menu">
                             <div className="dropdown-item">

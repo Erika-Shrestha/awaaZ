@@ -80,7 +80,8 @@
 }
 
 .arrow-icon {
-    font-size: 0.75rem;
+    width: 1rem;
+    margin-top: 0.2rem;
     transition: transform 0.3s ease;
 }
 
@@ -108,4 +109,5 @@
     text-decoration: none;
     font-weight: 500;
     cursor: pointer;
+    font-size: 0.85rem;
 }

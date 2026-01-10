@@ -7,6 +7,9 @@ import candidate2 from "../../../assets/candidate-2.jpg";
 import candidate3 from "../../../assets/candidate-3.jpg";
 import tiktok from "../../../assets/tiktok.png";
 import facebook from "../../../assets/facebook.png";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend} from 'chart.js';
+import {Doughnut} from "react-chartjs-2";
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 const Candidate = () => {
     return(
@@ -43,8 +46,29 @@ const Candidate = () => {
                             <img src={candidate2} alt="Bipin Shrestha" />
                         </div>
                         <div className="visibility-score">
-                            <div className="score-text">Visibility Score</div>
-                            <div className="score-value">3.5 %</div>
+                            <div className="score-text">
+                                <h1>Visibility Score</h1>
+                                <p>3.5%</p>
+                            </div>
+                            <Doughnut
+                                data = {{
+                                    labels: ['Pos'],
+                                    datasets: [{
+                                        data: [10, 90],
+                                        backgroundColor:["rgba(49,46,140,0.7)", "rgba(97, 95, 211, 0.5)"],
+                                        borderWidth: 0,
+                                        borderColor: 'transparent'
+                                    }]
+                                }}
+                                options={{
+                                    cutout: '75%',      
+                                    plugins:{
+                                        legend:{
+                                            display: false
+                                        }
+                                    }
+                                }}
+                            />
                         </div>
                     </div>
                     <div className="candidate-profile-right">
